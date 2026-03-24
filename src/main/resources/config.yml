@@ -1,0 +1,17 @@
+# If talking in groups should trigger vibrations
+groupInteraction: false
+
+# If whispering should trigger vibrations
+whisperInteraction: false
+
+# If talking while sneaking should trigger vibrations
+sneakInteraction: false
+
+# The frequency of the voice vibration
+voiceSculkFrequency: 15
+
+# The audio level threshold to activate the sculk sensor in dB
+minActivationThreshold: -50
+
+# Range of game event
+range: 16

@@ -1,0 +1,15 @@
+name: Vibrational
+version: '1.0.0'
+main: dev.mitask.vibrational.Vibrational
+bootstrapper: dev.mitask.vibrational.VibrationalBootstrap
+api-version: '1.21'
+load: POSTWORLD
+authors: [ MiTask ]
+folia-supported: true
+
+dependencies:
+  server:
+    voicechat:
+      load: BEFORE
+      required: true
+      join-classpath: true
