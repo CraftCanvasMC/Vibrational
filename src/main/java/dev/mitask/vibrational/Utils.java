@@ -1,9 +1,11 @@
 package dev.mitask.vibrational;
 
+// https://github.com/henkelmax/voicechat-interaction/blob/master/src/main/java/de/maxhenkel/vcinteraction/AudioUtils.java
 public class Utils {
     /**
      * Calculates the audio level of a signal with specific samples.
      *
+     * @author Henhelmax
      * @param samples the samples of the signal to calculate the audio level of
      * @return the audio level of the specified signal in db
      */
@@ -19,14 +21,8 @@ public class Utils {
 
         rms = (sampleCount == 0) ? 0 : Math.sqrt(rms / sampleCount);
 
-        double db;
-
-        if (rms > 0D) {
-            db = Math.min(Math.max(20D * Math.log10(rms), -127D), 0D);
-        } else {
-            db = -127D;
-        }
-
-        return db;
+        if(rms <= 0D) return -127D;
+        // dB
+        return Math.min(Math.max(20D * Math.log10(rms), -127D), 0D);
     }
 }
